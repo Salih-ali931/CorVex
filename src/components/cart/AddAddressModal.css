@@ -1,0 +1,88 @@
+/* Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal box */
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+.modal h3, .modal h4 {
+  margin-bottom: 12px;
+}
+
+/* Address card */
+.address-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.address-card p {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Card actions */
+.addr-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.addr-actions button {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.addr-actions .delete {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Inputs */
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Bottom buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+}
+
+.actions .cancel {
+  background: #aaa;
+}

@@ -1,0 +1,190 @@
+/* ================= ROOT ================= */
+
+.success-page {
+  min-height: 100vh;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  padding: 32px;
+}
+
+/* ================= CARD ================= */
+
+.success-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 56px 48px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+  animation: luxuryFade 0.7s ease-out;
+}
+
+/* subtle luxury entrance */
+@keyframes luxuryFade {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= SUCCESS ICON ================= */
+.success-ring {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(22, 163, 74, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 👇 luxury glow window */
+  box-shadow:
+    0 0 0 6px rgba(22, 163, 74, 0.06),
+    0 0 40px rgba(22, 163, 74, 0.15);
+
+  animation: ringLuxury 0.9s ease-out;
+}
+
+/* 
+/* ================= GREEN CHECK ================= */
+.check-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 👇 premium inner light */
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.35),
+    0 12px 28px rgba(22, 163, 74, 0.45);
+
+  animation: checkLuxury 0.45s ease-out 0.35s both;
+}
+
+
+
+@keyframes checkLuxury {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ================= TITLE ================= */
+
+.success-card h1 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+/* ================= INFO ================= */
+
+.order-id-box,
+.paid-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.order-id-box span,
+.paid-box span {
+  color: #777;
+  letter-spacing: 0.4px;
+}
+
+.order-id-box strong,
+.paid-box strong {
+  font-weight: 500;
+  color: #111;
+}
+
+/* ================= ACTIONS ================= */
+
+.success-actions {
+  display: flex;
+  gap: 18px;
+  margin-top: 40px;
+}
+
+/* PRIMARY BUTTON */
+
+.success-btn {
+  flex: 1;
+  padding: 16px 0;
+  border-radius: 14px;
+  background: #111;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 2px; /* luxury spacing */
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+/* SECONDARY BUTTON */
+
+.success-btn.outline {
+  background: #ffffff;
+  color: #111;
+  border: 1px solid #111;
+}
+
+/* HOVER – very subtle */
+
+.success-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.success-btn.outline:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ACTIVE */
+
+.success-btn:active {
+  transform: scale(0.97);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .success-card {
+    padding: 44px 30px;
+    border-radius: 20px;
+  }
+
+  .success-card h1 {
+    font-size: 22px;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+}

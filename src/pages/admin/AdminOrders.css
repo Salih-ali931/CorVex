@@ -1,0 +1,35 @@
+.admin-orders {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  font-family: Poppins, sans-serif;
+}
+
+.admin-card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

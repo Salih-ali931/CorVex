@@ -1,0 +1,63 @@
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 2000;
+}
+
+.menu-drawer {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.35s ease;
+}
+
+.menu-drawer.left {
+  left: 0;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.menu-head {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.menu-head button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.menu-section a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.menu-section.small a {
+  font-size: 14px;
+  color: #555;
+}
+
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 24px 0;
+}

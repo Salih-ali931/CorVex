@@ -1,0 +1,148 @@
+.orders-page {
+  padding: 50px 8%;
+  background: #f6f6f6;
+  font-family: "Poppins", sans-serif;
+}
+
+.orders-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.empty {
+  color: #777;
+}
+
+/* ================= CARD ================= */
+
+.order-card {
+  background: #fff;
+  padding: 26px;
+  margin-bottom: 28px;
+  border-radius: 16px;
+  box-shadow:
+    0 12px 40px rgba(0,0,0,0.08),
+    0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ================= HEADER ================= */
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.order-id span {
+  font-weight: 600;
+}
+
+.track-btn {
+  padding: 8px 16px;
+  font-size: 12px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.track-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ================= ITEM ================= */
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+}
+
+.order-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.item-details {
+  flex: 1;
+  cursor: pointer;
+}
+
+.item-details h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.item-details p {
+  font-size: 13px;
+  color: #555;
+}
+
+.price {
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+/* ================= STATUS ================= */
+
+.item-status {
+  text-align: right;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #eaf7f0;
+  color: #1a7f52;
+  border-radius: 14px;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+/* ================= FOOTER ================= */
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: none;
+  color: #d11a2a;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  text-decoration: underline;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-status {
+    text-align: left;
+    margin-top: 6px;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}

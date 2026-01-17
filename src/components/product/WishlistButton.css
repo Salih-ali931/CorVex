@@ -1,0 +1,46 @@
+.wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+  color: #000;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* HOVER */
+.wishlist-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ACTIVE (LIKED) */
+.wishlist-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+/* FILL HEART WHEN ACTIVE */
+.wishlist-btn.active svg {
+  fill: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .wishlist-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

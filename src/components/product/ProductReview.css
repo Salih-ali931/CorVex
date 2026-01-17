@@ -1,0 +1,15 @@
+.product-review {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.rating {
+  font-weight: 600;
+}
+
+.reviews {
+  color: #666;
+}

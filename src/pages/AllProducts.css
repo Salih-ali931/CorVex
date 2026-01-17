@@ -1,0 +1,48 @@
+/* ================= ALL PRODUCTS PAGE ================= */
+.all-products-page {
+  padding: 60px 6%;
+  background: #ffffff;
+}
+
+.all-products-page h1 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* ================= GRID ================= */
+.all-products-grid {
+  display: grid;
+  gap: 36px;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+/* 🖥 Desktop → 4 cards */
+@media (min-width: 1200px) {
+  .all-products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 💻 Tablet → 2 cards */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .all-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* 📱 Mobile → 2 cards */
+@media (max-width: 767px) {
+  .all-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .all-products-page h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}

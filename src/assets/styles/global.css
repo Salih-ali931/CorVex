@@ -1,0 +1,18 @@
+:root {
+  --white: #ffffff;
+  --offwhite: #f6f6f6;
+  --gold: #c9a24d;
+  --black: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--white);
+  color: var(--black);
+}

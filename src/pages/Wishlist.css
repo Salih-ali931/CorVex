@@ -1,0 +1,73 @@
+/* ================= PAGE ================= */
+.wishlist-page {
+  padding: 60px 6%;
+  background: #ffffff;
+}
+
+.wishlist-page h1 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.empty-text {
+  text-align: center;
+  color: #777;
+}
+
+/* ================= GRID ================= */
+.wishlist-grid {
+  display: grid;
+  gap: 36px;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .wishlist-page h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+/* ================= REMOVE BUTTON ================= */
+.wishlist-card-wrapper {
+  position: relative;
+}
+
+.wishlist-remove {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}

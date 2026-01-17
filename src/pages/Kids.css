@@ -1,0 +1,24 @@
+.men-page,
+.women-page,
+.kids-page {
+  padding: 60px 40px;
+  background: #ffffff;
+}
+
+.men-page h1,
+.women-page h1,
+.kids-page h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.men-grid,
+.women-grid,
+.kids-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}

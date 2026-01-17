@@ -1,0 +1,34 @@
+.cart-summary {
+  background: #fafafa;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+
+.cart-summary h3 {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-summary .row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.cart-summary .total {
+  font-weight: 600;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.place-order {
+  margin-top: 15px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 13px;
+  cursor: pointer;
+}

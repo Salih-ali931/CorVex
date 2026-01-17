@@ -1,0 +1,214 @@
+
+
+
+/* ================= ROOT ================= */
+.home {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ================= HERO BANNER (TEXT ON RIGHT) ================= */
+.hero-banner {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+    url("/images/banners/home-banner.jpg") center center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+
+.hero-content {
+  max-width: 560px;
+  text-align: right;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #ffffff;
+}
+
+.hero-content p {
+  margin-top: 14px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #dddddd;
+}
+
+.hero-content button {
+  margin-top: 42px;
+  padding: 14px 46px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ================= PRODUCT SECTION ================= */
+.product-section {
+  padding: 80px 6%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  letter-spacing: 5px;
+}
+
+.section-sub {
+  margin-top: 10px;
+  color: #777777;
+}
+
+/* ================= PRODUCT GRID ================= */
+.product-grid {
+  display: grid;
+  gap: 48px;
+  margin-top: 56px;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1023px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ================= PRODUCT IMAGE SIZE ================= */
+.product-img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+/* ================= CATEGORY BANNERS ================= */
+.category-card {
+  height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  margin: 120px 0;
+  cursor: pointer;
+}
+
+/* MEN */
+.category-card.men {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.55)),
+    url("/images/banners/men.jpg");
+}
+
+/* WOMEN */
+.category-card.women {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.55)),
+    url("/images/banners/women.jpg");
+}
+
+/* ================= CATEGORY CONTENT (TEXT RIGHT) ================= */
+.cat-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;     /* 🔥 RIGHT */
+
+  padding-right: 10%;        /* 🔥 SPACE FROM RIGHT */
+  color: #ffffff;
+  text-align: right;         /* 🔥 TEXT RIGHT */
+
+  background: rgba(0,0,0,0.25);
+}
+
+.cat-overlay h2 {
+  font-size: 42px;
+  letter-spacing: 6px;
+}
+
+.cat-overlay p {
+  margin-top: 10px;
+  max-width: 420px;
+  font-size: 14px;
+}
+
+.cat-overlay button {
+  margin-top: 20px;
+  padding: 14px 40px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cat-overlay button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 85vh;
+    padding-right: 7%;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+    letter-spacing: 4px;
+  }
+
+  .cat-overlay {
+    padding-right: 7%;
+  }
+
+  .category-card {
+    height: 80vh;
+    margin: 80px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    height: 65vh;
+  }
+}
+ 

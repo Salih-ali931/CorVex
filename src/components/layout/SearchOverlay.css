@@ -1,0 +1,115 @@
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
+  animation: slideDown 0.35s ease forwards;
+}
+
+/* ================= TOP BAR ================= */
+.search-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 60px;
+}
+
+.search-top input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+
+.search-top button {
+  background: none;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* ================= DIVIDER ================= */
+hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ================= BODY ================= */
+.search-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  padding: 50px 60px;
+}
+
+.search-col h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+  color: #777;
+}
+
+.search-col p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.search-col p:hover {
+  text-decoration: underline;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .search-top {
+    padding: 18px 20px;
+  }
+
+  .search-top input {
+    font-size: 18px;
+  }
+
+  .search-top button {
+    font-size: 12px;
+  }
+
+  .search-body {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 28px 20px;
+  }
+
+  .search-col h4 {
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+
+  .search-col p {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .search-top input {
+    font-size: 16px;
+  }
+
+  .search-col p {
+    font-size: 14px;
+  }
+}

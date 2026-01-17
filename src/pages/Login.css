@@ -1,0 +1,154 @@
+/* ===== PAGE ===== */
+.login-wrapper {
+  min-height: 100vh;
+  background: #f1f3f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+/* ===== CARD ===== */
+.login-card {
+  width: 860px;
+  height: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  transition: all 0.6s ease;
+}
+
+/* when signup */
+.login-card.signup {
+  flex-direction: row-reverse;
+}
+
+/* ===== BLUE PANEL ===== */
+.info-panel {
+  width: 50%;
+  background: linear-gradient(135deg, #3b5bdb, #4c6ef5);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 40px;
+  transition: all 0.6s ease;
+}
+
+.info-panel .logo {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.info-panel h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.info-panel p {
+  font-size: 14px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.info-panel button {
+  margin-top: 8px;
+  padding: 10px 26px;
+  border-radius: 24px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.info-panel button:hover {
+  background: #ffffff;
+  color: #3b5bdb;
+}
+
+/* ===== WHITE FORM ===== */
+.form-panel {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.form-panel h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* inputs */
+.form-panel input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-panel input:focus {
+  border-color: #3b5bdb;
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.15);
+}
+
+/* buttons */
+.form-panel button {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 24px;
+  border: none;
+  background: #3b5bdb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.form-panel button:hover {
+  background: #364fc7;
+  transform: translateY(-1px);
+}
+
+/* message */
+.msg {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .login-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .login-card.signup {
+    flex-direction: column;
+  }
+
+  .info-panel,
+  .form-panel {
+    width: 100%;
+  }
+
+  .info-panel {
+    border-radius: 0 0 16px 16px;
+  }
+}

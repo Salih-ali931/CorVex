@@ -7,6 +7,6 @@ const About = () => {
   );
 };
 
-// redeploy fix
+//  Vercel redeploy fix
 
 export default About;

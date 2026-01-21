@@ -44,10 +44,6 @@
   color: #fff;
 }
 
-.pay-btn.cod {
-  border-style: dashed;
-}
-
 /* MOBILE */
 @media (max-width: 480px) {
   .payment-card {

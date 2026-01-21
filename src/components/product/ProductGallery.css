@@ -1,12 +1,11 @@
 /* ================= GALLERY LAYOUT ================= */
-
 .pg-wrapper {
   display: flex;
   gap: 24px;
+  align-items: flex-start;
 }
 
 /* ================= THUMBNAILS ================= */
-
 .pg-thumbs {
   display: flex;
   flex-direction: column;
@@ -14,16 +13,12 @@
 }
 
 .pg-thumbs img {
-  width: 62px;
-  height: 62px;
-  object-fit: cover;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
   cursor: pointer;
-  border: 1px solid #e0e0e0;
-  transition: transform 0.2s ease, border 0.2s ease;
-}
-
-.pg-thumbs img:hover {
-  transform: scale(1.04);
+  background: #f2f2f2;
+  border: 1px solid #ddd;
 }
 
 .pg-thumbs img.active {
@@ -31,113 +26,97 @@
 }
 
 /* ================= MAIN IMAGE ================= */
-
 .pg-main {
   width: 440px;
-  height: 440px;
+  aspect-ratio: 1 / 1;
+  background: #f2f2f2;     /* SAME COLOR = NO DOUBLE BOX */
   overflow: hidden;
-  border: 1px solid #ededed;
-  background: #ECECEC;
   cursor: zoom-in;
 }
 
 .pg-main img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.15s ease-out;
+  object-fit: contain;
+  transform: scale(0.88); /* 🔥 NORMALIZES ALL IMAGES */
+  transition: transform 0.2s ease-out;
 }
 
-/* ================= FULLSCREEN MODAL ================= */
-
+/* ================= MODAL ================= */
 .pg-modal {
   position: fixed;
   inset: 0;
-  background: #E6E4E3;   /* 🔥 ONE SAME COLOR */
+  background: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
 }
 
-/* MODAL IMAGE CONTAINER */
 .pg-modal-img-box {
   width: 80vw;
   height: 80vh;
+  background: #f2f2f2;
   overflow: hidden;
   cursor: zoom-in;
-  background: #E6E4E3;   /* 🔥 SAME COLOR (NO DIFFERENCE) */
 }
 
-/* MODAL IMAGE */
 .pg-modal-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.15s ease-out;
+  transition: transform 0.2s ease-out;
 }
 
-/* ================= CLOSE BUTTON ================= */
-
+/* ================= CLOSE ================= */
 .pg-close {
   position: absolute;
-  top: 22px;
+  top: 24px;
   right: 28px;
   background: none;
   border: none;
-  font-size: 26px;
-  color: #000;
+  font-size: 28px;
   cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
 }
 
-.pg-close:hover {
-  opacity: 1;
-}
-
-/* ================= ARROW NAVIGATION ================= */
-
+/* ================= ARROWS ================= */
 .pg-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0,0,0,0.05);
   border: none;
-  color: #000;
-  font-size: 42px;
+  font-size: 40px;
   width: 56px;
   height: 86px;
   cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.pg-arrow:hover {
-  background: rgba(0, 0, 0, 0.1);
 }
 
 .pg-arrow.left {
-  left: 22px;
+  left: 20px;
 }
 
 .pg-arrow.right {
-  right: 22px;
+  right: 20px;
 }
 
 /* ================= MOBILE ================= */
-
 @media (max-width: 768px) {
   .pg-wrapper {
     flex-direction: column-reverse;
   }
 
+  .pg-thumbs {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .pg-main {
     width: 100%;
-    height: auto;
   }
 
   .pg-main img {
-    transform: none !important;
+    transform: scale(0.95);
     cursor: default;
   }
 

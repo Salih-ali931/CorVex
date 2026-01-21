@@ -1,6 +1,6 @@
 import Navbar from "../components/layout/Navbar";
 import ProductCard from "../components/product/ProductCard";
-import { kidsProducts } from "../data/kidsProducts";
+import { kidsProducts } from "../data/KidsProducts";
 import "./Kids.css";
 
 const Kids = () => {

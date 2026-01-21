@@ -1,19 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 /* ================= PRODUCT CARD ================= */
 .product-card {
   width: 100%;
   text-align: center;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
+  background: transparent;
 }
 
-/* ================= IMAGE BOX ================= */
+/* ================= IMAGE CONTAINER ================= */
+/* 🔥 NO BACKGROUND = NO SECOND BOX */
 .product-img-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background: #111111;
+  aspect-ratio: 3 / 4;     /* Desktop ratio */
+  background: transparent;
   overflow: hidden;
-  border-radius: 4px;
 }
 
 /* LINK */
@@ -24,12 +27,16 @@
 }
 
 /* ================= IMAGES ================= */
+/* 🔥 IMAGE IS THE ONLY VISIBLE ELEMENT */
 .img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+
+  object-fit: contain;     /* No crop */
+  background: transparent;
+
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -38,48 +45,47 @@
   opacity: 1;
 }
 
-/* ================= DESKTOP IMAGE HOVER ================= */
+/* ================= DESKTOP HOVER (2nd IMAGE) ================= */
 @media (hover: hover) and (pointer: fine) {
   .product-img-box:hover .img-1 {
     opacity: 0;
   }
+
   .product-img-box:hover .img-2 {
     opacity: 1;
   }
 }
 
-/* ================= ❤️ CLEAN HEART BUTTON ================= */
+/* ================= ❤️ WISHLIST BUTTON ================= */
 .product-img-box .wishlist-btn {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 12px;
+  right: 12px;
 
-  background: transparent;
+  background: rgba(255, 255, 255, 0.9);
   border: none;
-  padding: 0;
+  border-radius: 50%;
+  padding: 6px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #111;              /* outline */
+  color: #222;
   cursor: pointer;
   z-index: 5;
 
-  transition: color 0.25s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.25s ease;
 }
 
-/* hover */
 .product-img-box .wishlist-btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
-/* ACTIVE → RED */
 .product-img-box .wishlist-btn.active {
   color: #e11d48;
 }
 
-/* fill heart only when active */
 .product-img-box .wishlist-btn.active svg {
   fill: currentColor;
 }
@@ -87,7 +93,7 @@
 /* ================= MOBILE DOTS ================= */
 .img-dots {
   position: absolute;
-  bottom: 12px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -96,8 +102,8 @@
 }
 
 .img-dots span {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -106,7 +112,7 @@
   background: #000;
 }
 
-/* hide dots on desktop */
+/* Hide dots on desktop */
 @media (hover: hover) and (pointer: fine) {
   .img-dots {
     display: none;
@@ -115,7 +121,7 @@
 
 /* ================= PRODUCT INFO ================= */
 .product-info {
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
 .product-info h3 {
@@ -135,12 +141,7 @@
 /* ================= MOBILE ================= */
 @media (max-width: 767px) {
   .product-img-box {
-    aspect-ratio: 1 / 1;
-  }
-
-  .product-img-box .wishlist-btn svg {
-    width: 18px;
-    height: 18px;
+    aspect-ratio: 1 / 1;   /* Square on mobile */
   }
 
   .product-info h3 {
@@ -149,5 +150,10 @@
 
   .price {
     font-size: 13px;
+  }
+
+  .wishlist-btn svg {
+    width: 18px;
+    height: 18px;
   }
 }

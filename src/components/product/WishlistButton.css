@@ -1,3 +1,4 @@
+/* ================= WISHLIST BUTTON ================= */
 .wishlist-btn {
   position: absolute;
   top: 12px;
@@ -17,8 +18,8 @@
   cursor: pointer;
   color: #000;
 
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background 0.25s ease, color 0.25s ease;
 }
 
 /* HOVER */
@@ -34,10 +35,10 @@
 
 /* FILL HEART WHEN ACTIVE */
 .wishlist-btn.active svg {
-  fill: #fff;
+  fill: currentColor;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .wishlist-btn {
     width: 40px;

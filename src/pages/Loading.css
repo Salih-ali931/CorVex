@@ -1,0 +1,63 @@
+.loading-page {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BRAND BOX */
+.brand-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* LOGO */
+.brand {
+  font-size: 34px;
+  letter-spacing: 6px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* PREMIUM RING */
+.premium-loader {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-top: 2px solid #000;
+  animation: spin 0.9s linear infinite;
+}
+
+/* TEXT */
+.loading-text {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #666;
+  animation: fade 1.2s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .brand {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+}
